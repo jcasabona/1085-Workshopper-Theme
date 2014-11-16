@@ -1,0 +1,122 @@
+// Layout: Content-Sidebar
+@if $layout == content-sidebar {
+	.content-area {
+		float: left;
+		margin: 0 -25% 0 0;
+		width: 100%;
+	}
+	.site-main {
+		margin: 0 25% 0 0;
+	}
+	.site-content .widget-area { /* Sidebar 1 */
+		float: right;
+		overflow: hidden;
+		width: 25%;
+	}
+}
+
+// Layout: Sidebar-Content
+@else if $layout == sidebar-content {
+	.content-area {
+		float: right;
+		margin: 0 0 0 -25%;
+		width: 100%;
+	}
+	.site-main {
+		margin: 0 0 0 25%;
+	}
+	.site-content .widget-area { /* Sidebar 1 */
+		float: left;
+		overflow: hidden;
+		width: 25%;
+	}
+}
+
+@if $layout != null {
+	.site-footer {
+		clear: both;
+		width: 100%;
+	}
+}
+
+
+header, footer{
+	padding: $padding*2;
+
+	article &{
+		padding: $padding 0;
+		}
+	}
+
+
+.contain{
+		max-width: 1400px;
+		margin: 0 auto;
+		}
+
+.site-branding{
+	float: left;
+	}
+
+.site-content{
+	background: $text-color;
+	color: $body-background;
+	border-top: 3px solid $accent;
+
+	article &{
+		padding: $padding 0;
+		}
+	
+	}
+
+.content-area{
+	padding: $padding*2;
+
+	@media screen and (min-width: $bp-xl){
+		max-width: 70%;
+		margin: 0 auto;
+	}
+
+
+	& form{
+		@media screen and (min-width: $bp-xl){
+			max-width: 50%;
+			margin: 0 auto;
+		}
+
+		}
+
+
+	}
+
+.entry-footer{
+	background: $accent;
+	padding: $padding;
+	color: #FFFFFF;
+
+	& a{
+		color: #FFFFFF;
+		text-decoration: underline;
+		}
+	}
+
+table{
+	width: 100%;
+	background: #fff;	
+	border-collapse: collapse;
+
+	& td, & th{
+		padding: $padding/2;
+		border: 1px solid #ddd;
+		text-align: left;
+		}
+
+	& th{
+		background: lighten($accent, 10%);
+		font-weight: bold;
+		color: #FFFFFF;
+		}
+
+
+
+	}

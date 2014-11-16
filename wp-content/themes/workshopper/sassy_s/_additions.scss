@@ -1,0 +1,60 @@
+/*
+Stuff that I added that didn't have a great place in the 
+original file set
+*/
+
+a.button{
+	display: block;
+	background: darken($accent-two, 30%);
+	padding: $padding;
+	margin: $padding*2 auto;
+	max-width: 50%;
+	text-align: center;
+	color: #FFFFFF;
+	@include border-radius();
+	text-decoration: none;
+
+	&:visited{
+		color: #FFFFFF;
+		}
+
+	@include hoverActiveFocus(){
+		background: darken($accent-two, 20%);
+		@include transition(all, 0.2s, ease-in-out);
+		}
+
+
+
+	@media screen and (min-width: $bp-large){
+		max-width: 30%;
+		}
+
+	}
+
+.jumbotron{
+	margin: 0;
+	padding: $padding*2;
+	vertical-align: top;
+	background: url('road-alpha.png') no-repeat bottom;
+	//color: #FFFFFF;
+	text-align: center;
+	font-size: $base-font-size+0.25;
+	
+	@media screen and (min-width: $bp-large+10){
+			& .site-info{
+				max-width: 85%;
+				display: inline-block;
+				text-align: left;
+				vertical-align: top;
+				}
+		}
+
+	}	
+
+
+#home-widgets{
+	.widget{
+		float: left;
+		max-width: 30%;
+	}
+}
