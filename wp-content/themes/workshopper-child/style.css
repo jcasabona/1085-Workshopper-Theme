@@ -107,21 +107,29 @@ a.button {
       width: 90%; }
 
 @media screen and (max-width: 630px) {
-  table.tix_tickets_table thead th {
+  table.tix_tickets_table:not(.tix-attendee-form) thead th {
     left: -999999px;
     position: absolute; }
-  table.tix_tickets_table td {
+  table.tix_tickets_table:not(.tix-attendee-form) tr.tix-row-total td:nth-of-type(2):before {
+    content: "Total: "; }
+  table.tix_tickets_table:not(.tix-attendee-form) td {
+    border: 0;
+    border-bottom: 1px solid #999999;
     display: block; }
-    table.tix_tickets_table td:before {
+    table.tix_tickets_table:not(.tix-attendee-form) td.tix-column-description {
+      width: 100%; }
+    table.tix_tickets_table:not(.tix-attendee-form) td:before {
       display: inline-block;
       width: 50%;
       padding-right: 10px;
       white-space: nowrap; }
-    table.tix_tickets_table td:nth-of-type(2):before {
-      content: "Price: "; }
-    table.tix_tickets_table td:nth-of-type(3):before {
+    table.tix_tickets_table:not(.tix-attendee-form) td.tix-column-quantity:before {
+      content: "Quantity: "; }
+    table.tix_tickets_table:not(.tix-attendee-form) td.tix-column-remaining:before {
       content: "Remaining: "; }
-    table.tix_tickets_table td:nth-of-type(4):before {
-      content: "Quantity: "; } }
+    table.tix_tickets_table:not(.tix-attendee-form) td.tix-column-per-ticket:before {
+      content: "Price per: "; }
+    table.tix_tickets_table:not(.tix-attendee-form) td.tix-column-price:before {
+      content: "Price: "; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -142,14 +142,24 @@ a.button {
 //Ticket Table
 
 @media screen and (max-width: 630px) {
-  table.tix_tickets_table {
+  table.tix_tickets_table:not(.tix-attendee-form) {
     thead th {
       left: -999999px;
       position: absolute;
     }
 
+		tr.tix-row-total td:nth-of-type(2):before {
+			content: "Total: ";
+		}
+
     td {
+			border: 0;
+			border-bottom: 1px solid #999999;
       display: block;
+
+			&.tix-column-description {
+				width: 100%;
+			}
 
       &:before {
         display: inline-block;
@@ -158,16 +168,20 @@ a.button {
         white-space: nowrap;
       }
 
-      &:nth-of-type(2):before {
-        content: "Price: ";
+			&.tix-column-quantity:before {
+        content: "Quantity: ";
       }
 
-      &:nth-of-type(3):before {
+			&.tix-column-remaining:before {
         content: "Remaining: ";
       }
 
-      &:nth-of-type(4):before {
-        content: "Quantity: ";
+			&.tix-column-per-ticket:before {
+	      content: "Price per: ";
+			}
+
+			&.tix-column-price:before {
+        content: "Price: ";
       }
     }
   }
