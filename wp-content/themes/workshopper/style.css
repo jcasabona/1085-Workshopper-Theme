@@ -807,13 +807,34 @@ a.button {
   font-size: 1.5em; }
   @media screen and (min-width: 66em) {
     .jumbotron .site-info {
-      max-width: 85%;
+      max-width: 55%;
       display: inline-block;
       text-align: left;
       vertical-align: top; } }
 
-#home-widgets .widget {
-  float: left;
-  max-width: 30%; }
+.header-widget-area {
+  background: #FF5B4E;
+  color: #FFFFFF;
+  padding: 1em;
+  margin-right: 0.625em; }
+  .header-widget-area ul li, .header-widget-area ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; }
+  .header-widget-area dl {
+    padding: 0;
+    margin: 0; }
+    .header-widget-area dl dt, .header-widget-area dl dd {
+      margin: 0 0.25em;
+      padding: 0; }
+  .header-widget-area a {
+    color: black; }
+    .header-widget-area a:hover, .header-widget-area a:active, .header-widget-area a:focus {
+      text-decoration: none; }
+  @media screen and (min-width: 66em) {
+    .header-widget-area {
+      max-width: 40%;
+      display: inline-block;
+      text-align: left; } }
 
 /*# sourceMappingURL=style.css.map */

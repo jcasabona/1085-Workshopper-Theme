@@ -132,7 +132,7 @@ function workshopper_jumbotron(){
 				<h2>Welcome to <?php bloginfo('name'); ?></h2>
 				<h3><?php bloginfo( 'description' ); ?></h3>
 
-				<?php get_sidebar('header'); ?>
+				<?php get_sidebar('home'); ?>
 			</div>
 
 			
