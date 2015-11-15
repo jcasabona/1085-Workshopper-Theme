@@ -21,12 +21,40 @@ body, body.basic {
 .home-widget.col-md-3 {
 	font-size: 1.45em;
 	text-align: left;
+	width: auto;
+
+	img {
+		max-width: 200px;
+		max-height: auto;
+		margin: 15px auto;
+
+		@media screen and (min-width: 600px) {
+			float: left;
+			margin: -5px 15px 15px;
+		}
+	}
 
 	@media screen and (min-width: 970px) {
 		display: inline-block;
 		float: none;
 		vertical-align: top;
-		width: 33%;
+	}
+
+	&.third {
+		@media (min-width: 970px) {
+			width: 33%;
+		}
+
+		img {
+			float: none;
+			margin: 15px auto;
+		}
+	}
+
+	&.half {
+		@media (min-width: 970px) {
+			width: 49%;
+		}
 	}
 
 	p:nth-child(2){

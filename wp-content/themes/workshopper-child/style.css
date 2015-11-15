@@ -17,13 +17,30 @@ body, body.basic {
 
 .home-widget.col-md-3 {
   font-size: 1.45em;
-  text-align: left; }
+  text-align: left;
+  width: auto; }
+  .home-widget.col-md-3 img {
+    max-width: 200px;
+    max-height: auto;
+    margin: 15px auto; }
+    @media screen and (min-width: 600px) {
+      .home-widget.col-md-3 img {
+        float: left;
+        margin: -5px 15px 15px; } }
   @media screen and (min-width: 970px) {
     .home-widget.col-md-3 {
       display: inline-block;
       float: none;
-      vertical-align: top;
+      vertical-align: top; } }
+  @media (min-width: 970px) {
+    .home-widget.col-md-3.third {
       width: 33%; } }
+  .home-widget.col-md-3.third img {
+    float: none;
+    margin: 15px auto; }
+  @media (min-width: 970px) {
+    .home-widget.col-md-3.half {
+      width: 49%; } }
   .home-widget.col-md-3 p:nth-child(2) {
     font-style: italic; }
 
